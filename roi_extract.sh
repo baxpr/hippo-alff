@@ -18,6 +18,7 @@
 #   rh.hippoAmygLabels-T1.v21.HBT.FSvoxelSpace_post.nii.gz
 #   rh.hippoAmygLabels-T1.v21.HBT.FSvoxelSpace_total.nii.gz
 
+
 # Resample ROIs to ALFF image space (assume already registered)
 for h in lh rh; do
     for r in ant post total; do
@@ -27,6 +28,7 @@ for h in lh rh; do
         -ref /INPUTS/rsfc_ALFF.nii.gz
     done
 done
+
 
 # ROI extract
 csv=/OUTPUTS/stats.csv
@@ -42,3 +44,6 @@ for h in lh rh; do
         done
     done
 done
+
+
+# Make QA PDF showing mean fmri, alff, and ROIs
