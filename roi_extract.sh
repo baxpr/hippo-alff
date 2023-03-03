@@ -53,7 +53,7 @@ done
 # Overlays:
 #    Hippo ROIs left and right
 #    BRAINMASK from ALFF
-cp /INPUTS/mt1.nii.gz /INPUTS/meanadfmri.nii.gz /OUTPUTS
+cp /INPUTS/{mt1.nii.gz,meanadfmri.nii.gz,rmask.nii.gz} /OUTPUTS
 cd /OUTPUTS
 lcom=( $(fslstats rlh.hippoAmygLabels-T1.v21.HBT.FSvoxelSpace_total -c) )
 rcom=( $(fslstats rrh.hippoAmygLabels-T1.v21.HBT.FSvoxelSpace_total -c) )
